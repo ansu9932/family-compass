@@ -1,0 +1,23 @@
+[Unit]
+Description=Family Compass encrypted signaling
+After=network-online.target
+Wants=network-online.target
+[Service]
+User=familycompass
+Group=familycompass
+EnvironmentFile=/etc/familycompass.env
+WorkingDirectory=/opt/familycompass
+ExecStart=/usr/bin/python3 /opt/familycompass/server.py
+Restart=always
+RestartSec=2
+StateDirectory=familycompass
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=128M
+TasksMax=64
+UMask=0077
+[Install]
+WantedBy=multi-user.target

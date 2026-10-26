@@ -1,0 +1,1 @@
+{"private":true,"type":"module","scripts":{"dev":"wrangler dev","deploy":"wrangler deploy","migrate:local":"wrangler d1 migrations apply familycompass-media --local","migrate:remote":"wrangler d1 migrations apply familycompass-media --remote"},"devDependencies":{"@cloudflare/workers-types":"^4.20261023.0","typescript":"^5.9.0","wrangler":"^4.146.0"}}

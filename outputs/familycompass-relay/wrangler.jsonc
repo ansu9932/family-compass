@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "familycompass-media-relay",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-23",
+  "workers_dev": true,
+  "observability": { "enabled": true, "head_sampling_rate": 0.05 },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "familycompass-media",
+      "database_id": "7df826a8-fa72-44ab-a0aa-33b4aed0c51e",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "triggers": { "crons": ["17 3 * * *"] }
+}

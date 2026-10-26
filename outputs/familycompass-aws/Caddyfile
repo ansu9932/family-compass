@@ -1,0 +1,11 @@
+familycompass.35.154.20.53.sslip.io {
+    request_body {
+        max_size 50KB
+    }
+    header {
+        -Server
+        Referrer-Policy no-referrer
+        Strict-Transport-Security "max-age=31536000"
+    }
+    reverse_proxy 127.0.0.1:8080
+}
